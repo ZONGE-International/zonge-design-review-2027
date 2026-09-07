@@ -286,3 +286,112 @@ body.precision-viewer-open { overflow:hidden; }
  .zonge-contact-email-panel>.zonge-contact-section-heading h2 { font-size:28px; }
  .zonge-contact-email-panel>.zonge-contact-section-heading { margin-bottom:18px; }
 }
+
+/* A concise project introduction before the deeper field story. */
+.precision-route-strip { padding-block:44px; }
+.precision-recent-work { padding-block:30px 40px; }
+.precision-evidence-story { grid-template-columns:minmax(0,.9fr) minmax(0,1.2fr); gap:52px; padding-block:70px; align-items:center; }
+.precision-case-narrative .precision-case-copy { margin-bottom:30px; }
+.precision-evidence-story .precision-case-copy h2 { font-size:clamp(40px,4vw,56px); }
+.precision-evidence-story .precision-case-figure { grid-column:auto; padding:16px; box-shadow:10px 10px 0 var(--paper); }
+.precision-case-narrative .precision-case-insight>p:not(.precision-eyebrow) { font-size:19px; line-height:1.6; }
+.precision-evidence-story .precision-case-figure figcaption { flex-direction:column; align-items:stretch; gap:14px; font-size:12px; }
+.precision-evidence-story .precision-figure-enlarge { justify-content:space-between; }
+/* Uniform optical scale while preserving complete product photographs. */
+.precision-product-grid-pair .precision-card-photo { display:flex; justify-content:center; align-items:center; }
+.precision-product-grid-pair .precision-card-photo img { max-width:340px; }
+.photo-photograph .precision-card-photo img,.photo-cutout .precision-card-photo img { object-fit:contain; }
+.photo-cutout .precision-card-photo { padding:20px; }
+/* Contact: immediate call choices, a shorter form, and compact office details. */
+.precision-page-hero.precision-contact-hero .precision-page-hero-grid { grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:40px; }
+.precision-contact-hero { margin-bottom:0; }
+.precision-contact-calls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+.precision-contact-calls a { display:flex; flex-direction:column; justify-content:center; gap:5px; min-height:64px; padding:12px 16px; border:1px solid #bbccd5; background:#fff; color:var(--ink); text-decoration:none; }
+.precision-contact-calls a:hover { border-color:var(--blue); background:#f7fafb; }
+.precision-contact-calls a:focus-visible { outline:3px solid var(--blue); outline-offset:3px; }
+.precision-contact-calls span { font-size:13px; }
+.precision-contact-calls strong { font-size:18px; font-weight:500; white-space:nowrap; }
+.precision-contact-hero .precision-page-heading { padding-block:30px; }
+.precision-contact-hero .precision-page-summary { max-width:480px; }
+.zonge-contact-page { padding-block:34px 56px; }
+.zonge-contact-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:76px; }
+.zonge-contact-main-col,.zonge-contact-side-col { min-width:0; margin:0; }
+.zonge-contact-email-panel { padding:0; border:0; margin:0; }
+.zonge-contact-email-panel>.zonge-contact-section-heading { margin-bottom:22px; }
+.zonge-contact-form textarea.form-control { min-height:140px; height:140px; }
+.precision-contact-options { border-block:1px solid var(--line); margin:0 0 22px; }
+.precision-contact-options>summary { display:flex; align-items:center; flex-wrap:wrap; gap:5px; cursor:pointer; padding:14px 0; min-height:48px; font-size:15px; color:var(--ink); list-style:none; }
+.precision-contact-options>summary::-webkit-details-marker { display:none; }
+.precision-contact-options>summary::after { content:'+'; margin-left:auto; font-size:22px; }
+.precision-contact-options[open]>summary::after { content:'−'; }
+.precision-contact-options>summary>span { color:var(--muted); font-size:13px; }
+.precision-contact-options>.row { padding-top:8px; }
+.precision-contact-options>summary:focus-visible { outline:3px solid var(--blue); outline-offset:3px; }
+.zonge-contact-side-col>h2 { font-size:26px; font-weight:500; letter-spacing:-.03em; margin:0 0 10px; }
+.precision-office-company { font-size:14px; color:var(--muted); margin:0 0 22px; }
+.precision-office { padding-block:20px; border-top:1px solid var(--line); }
+.precision-office:last-child { padding-bottom:0; }
+.precision-office h3 { margin:0 0 8px; font-size:21px; font-weight:500; letter-spacing:-.02em; }
+.precision-office-role { font-size:14px; color:var(--muted); margin:0 0 10px; }
+.precision-office address { margin:0 0 8px; font-size:15px; line-height:1.6; color:var(--muted); }
+.precision-office address span { display:block; }
+.precision-office>a { display:inline-flex; align-items:center; gap:20px; min-height:44px; font-size:16px; }
+@media(max-width:1000px) {
+ .precision-page-hero.precision-contact-hero .precision-page-hero-grid { grid-template-columns:1fr; gap:0; padding-bottom:24px; }
+ .precision-contact-hero .precision-page-heading { padding-block:24px 20px; }
+ .precision-contact-hero .precision-page-summary { max-width:none; }
+ .precision-contact-calls { max-width:520px; }
+ .zonge-contact-grid { gap:36px; }
+ .precision-evidence-story { gap:32px; }
+}
+@media(max-width:767px) {
+ .zonge-contact-grid { grid-template-columns:1fr; gap:40px; }
+ .zonge-contact-side-col { padding-top:28px; border-top:1px solid var(--line); }
+ .precision-evidence-story { grid-template-columns:1fr; }
+}
+@media(max-width:600px) {
+ .precision-route-strip { padding-block:24px; }
+ .precision-recent-work { padding-block:24px 30px; }
+ .precision-evidence-story { padding-block:38px; gap:26px; }
+ .precision-case-narrative .precision-case-copy { margin-bottom:24px; }
+ .precision-evidence-story .precision-case-copy h2 { font-size:clamp(40px,12.5vw,48px); }
+ .precision-case-narrative .precision-case-insight>p:not(.precision-eyebrow) { font-size:18px; }
+ .precision-evidence-story .precision-case-figure { padding:12px; box-shadow:5px 5px 0 var(--paper); }
+ .precision-product-grid-pair .precision-card-photo img { max-width:100%; }
+ .photo-cutout .precision-card-photo { padding:8px; }
+ .precision-contact-calls { gap:10px; }
+ .precision-contact-calls a { padding:10px; min-height:64px; }
+ .precision-contact-calls span { font-size:12px; }
+ .precision-contact-calls strong { font-size:16px; }
+ .precision-contact-hero .precision-page-heading { padding-block:22px 18px; }
+ .precision-contact-hero .precision-page-summary { margin-top:10px; }
+ .zonge-contact-page { padding-block:24px 40px; }
+ .zonge-contact-email-panel>.zonge-contact-section-heading { margin-bottom:18px; }
+ .zonge-contact-email-panel>.zonge-contact-section-heading h2 { margin:0; font-size:26px; }
+ .precision-contact-options>summary { font-size:14px; }
+}
+
+/* A genuine processing example, presented as a complete scientific figure. */
+.precision-software-hero .precision-software-response { padding:20px; }
+.precision-response-label { display:flex; justify-content:space-between; gap:16px; padding-bottom:16px; border-bottom:1px solid var(--line); font:11px var(--mono); color:var(--muted); }
+.precision-response-image { display:block; background:#fff; padding-top:12px; }
+.precision-software-hero .precision-response-image img { display:block; height:340px; width:100%; object-fit:contain; }
+.precision-software-hero .precision-software-response figcaption { display:grid; grid-template-columns:1fr auto; gap:10px 16px; padding-top:14px; border-top:1px solid var(--line); text-align:left; margin-top:12px; }
+.precision-software-response figcaption strong { font-size:15px; color:var(--ink); font-weight:500; }
+.precision-software-response figcaption>span { grid-column:1/-1; font-size:12px; line-height:1.6; }
+.precision-response-open { display:inline-flex; align-items:center; gap:12px; font-size:13px; }
+@media(max-width:600px) {
+ .precision-software-hero .precision-software-response { padding:16px; }
+ .precision-software-hero .precision-response-image img { height:300px; }
+ .precision-response-label { font-size:10px; gap:10px; }
+ .precision-response-open { min-height:44px; }
+ .precision-software-response figcaption strong { align-self:center; }
+}
+.precision-office { margin:0; }
+.precision-software-hero .precision-software-response { width:100%; max-width:500px; justify-self:end; }
+@media(max-width:600px) {
+ .precision-route-strip { gap:0; padding-block:16px; }
+ .precision-route-strip>a:nth-child(n) { padding:14px 0; min-height:56px; }
+ .precision-route-strip>a>.precision-eyebrow,.precision-route-strip>a>p { display:none; }
+ .precision-route-strip h2 { font-size:21px; margin:0; }
+}
