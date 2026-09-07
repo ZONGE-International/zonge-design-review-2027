@@ -185,7 +185,6 @@
   .precision-field-panorama { height:350px; }
   .precision-case-study { grid-template-columns:1fr; gap:34px; }
   .precision-case-copy { max-width:650px; }
-  .precision-case-copy h2 br { display:none; }
   .precision-case-figure { width:min(100%,660px); justify-self:center; }
   .precision-product-stage .precision-feature-grid { grid-template-columns:1fr; gap:28px; }
   .precision-product-stage .precision-feature-image { width:min(100%,650px); justify-self:center; }
@@ -271,4 +270,30 @@
   .precision-product-facts dt { font-size:18px; }
   .precision-product-facts dd { font-size:12px; }
   .precision-product-photo { padding:16px; margin:0; }
+}
+
+/* Phone usability: compact menus, touch targets, and readable software rows. */
+@media(max-width:900px) {
+  .precision-dropdown>summary { padding:14px 0; }
+  .precision-dropdown-panel a { min-height:44px; }
+}
+@media(max-width:600px) {
+  .precision-method-rail { gap:8px 16px; }
+  .precision-method-rail>a { display:inline-flex; align-items:center; min-height:44px; min-width:44px; padding-inline:8px; font-size:14px; }
+}
+@media(max-width:767px) {
+  .zonge-section-prose .zonge-software-table { display:table; width:100%; min-width:0; table-layout:fixed; }
+  .zonge-section-prose .zonge-software-table th,
+  .zonge-section-prose .zonge-software-table td { min-width:0; padding:12px 10px; overflow-wrap:anywhere; font-size:16px; }
+  .zonge-section-prose .zonge-software-table th:first-child,
+  .zonge-section-prose .zonge-software-table td:first-child { width:94px; }
+}
+
+.precision-card-facts { width:100%; }
+.precision-product-photo.has-family-caption { display:flex; flex-direction:column; gap:12px; }
+.precision-product-photo.has-family-caption img { flex:1; min-height:0; height:0; }
+.precision-family-caption { margin:0; font-size:12px; line-height:1.5; color:var(--muted); }
+.precision-matrix-scroll-hint { display:none; }
+@media(max-width:600px) {
+  .precision-matrix-scroll-hint { display:block; margin:0 0 14px; font-size:14px; color:var(--muted); }
 }
