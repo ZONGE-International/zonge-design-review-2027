@@ -5,10 +5,24 @@
     const controls = [...document.querySelectorAll('[data-instrument-filter]')];
     const groups = [...catalog.querySelectorAll('.precision-catalog-group')];
     const status = catalog.querySelector('.precision-filter-status');
+    // Scroll only the horizontal category strip, preserving the page's position.
+    const revealSelectedCategory = () => {
+      const selected = controls.find(link => link.getAttribute('aria-current') === 'true');
+      if (!selected) return;
+      const strip = selected.closest('.precision-category-nav');
+      if (strip.scrollWidth <= strip.clientWidth + 1) return;
+      const bounds = strip.getBoundingClientRect();
+      const item = selected.getBoundingClientRect();
+      const inset = 12;
+      if (item.left < bounds.left + inset) strip.scrollLeft += item.left - bounds.left - inset;
+      else if (item.right > bounds.right - inset) strip.scrollLeft += item.right - bounds.right + inset;
+    };
+
     const select = (key, announce = false) => {
       if (key !== 'all' && !groups.some(group => group.id === key)) key = 'all';
       groups.forEach(group => { group.hidden = key !== 'all' && group.id !== key; });
       controls.forEach(link => key === link.dataset.instrumentFilter ? link.setAttribute('aria-current', 'true') : link.removeAttribute('aria-current'));
+      requestAnimationFrame(revealSelectedCategory);
       if (announce) status.textContent = key === 'all' ? 'Showing all 15 instruments.' : `Showing ${catalog.querySelectorAll('.precision-catalog-group:not([hidden]) .precision-product-card').length} ${key.toLowerCase()}.`;
     };
     const fromHash = () => select(location.hash.slice(1) === 'all-instruments' ? 'all' : location.hash.slice(1));
@@ -22,6 +36,8 @@
     window.addEventListener('hashchange', fromHash);
     window.addEventListener('popstate', fromHash);
     fromHash();
+    document.fonts?.ready.then(revealSelectedCategory);
+    window.addEventListener('resize', () => requestAnimationFrame(revealSelectedCategory));
   }
 
   const viewer = document.querySelector('.precision-image-dialog');
