@@ -149,6 +149,20 @@
             inquiryType.value = intentMap[selectedIntent];
         }
 
+        // Only known catalog programs can initialize an empty inquiry message.
+        var requestedProgram = cleanValue(query.get("program"), 32).toUpperCase();
+        var messageInput = document.getElementById("contact-message");
+        var softwarePrograms = [];
+        try {
+            softwarePrograms = JSON.parse(form.getAttribute("data-software-programs") || "[]");
+        } catch (error) {
+            softwarePrograms = [];
+        }
+        if (selectedIntent === "software-support" && Array.isArray(softwarePrograms) &&
+            softwarePrograms.indexOf(requestedProgram) !== -1 && messageInput && !messageInput.value.trim()) {
+            messageInput.value = "I’m interested in " + requestedProgram + ". Please advise on access and compatibility for my workflow.";
+        }
+
         if (sourcePageInput) {
             sourcePageInput.value = sourcePath || "Not available";
         }
