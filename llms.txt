@@ -1,0 +1,30 @@
+# Zonge International
+
+> Official website of Zonge International, Inc., covering geophysical survey services, instruments, software, company information, and contact details.
+
+## Primary pages
+
+- [About Zonge](https://www.zonge.com/about/): Company background, history, and locations.
+- [Upcoming events](https://www.zonge.com/events/): Conferences and trade shows where visitors can meet the Zonge team.
+- [Contact Zonge](https://www.zonge.com/contact/): Office phone numbers and the website inquiry form.
+- [Geophysical instruments](https://www.zonge.com/instruments/): Receivers, transmitters, generators, and sensors.
+- [Geophysical software](https://www.zonge.com/software/): Processing, quality-control, modeling, and interpretation programs.
+
+## Survey methods
+
+- [Induced Polarization](https://www.zonge.com/methods/groundmethods/ip/)
+- [Controlled-Source AMT](https://www.zonge.com/methods/groundmethods/csamt/)
+- [Magnetotellurics and AMT](https://www.zonge.com/methods/groundmethods/mt/)
+- [Transient Electromagnetics](https://www.zonge.com/methods/groundmethods/tem/)
+- [Gravity](https://www.zonge.com/methods/groundmethods/gravity/)
+- [UAV magnetic surveys](https://www.zonge.com/methods/airborne-methods/drone-magnetic-surveys/)
+
+## Application areas
+
+- [Mining exploration](https://www.zonge.com/targets/mining/)
+- [Geothermal exploration](https://www.zonge.com/targets/geothermal/)
+- [Groundwater exploration](https://www.zonge.com/targets/groundwater/)
+
+## Additional resources
+
+- [Articles and updates](https://www.zonge.com/blog/)
