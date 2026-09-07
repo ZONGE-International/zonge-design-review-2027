@@ -1,0 +1,242 @@
+/* Field evidence, useful product detail, and a shorter route to the right tool. */
+[hidden] { display:none!important; }
+.precision-step-number { display:inline-grid; place-items:center; width:34px; height:34px; margin-right:12px; border:1px solid currentColor; border-radius:50%; font:13px var(--mono); }
+.precision-field-heading h2 { font-size:clamp(48px,6vw,86px); font-weight:400; line-height:1; letter-spacing:-.055em; }
+.precision-field-heading { padding-block:0 48px; }
+.precision-field-panorama { height:480px; }
+.precision-evidence-story { grid-template-columns:1fr 1fr; gap:46px 80px; padding-block:84px; }
+.precision-evidence-story .precision-case-copy .precision-eyebrow { max-width:none; }
+.precision-evidence-story .precision-case-copy h2 { font-size:clamp(48px,5.5vw,78px); font-weight:400; line-height:1.04; margin:0; }
+.precision-case-copy h2 em { font-weight:300; font-style:normal; color:#24758a; }
+.precision-case-insight>p:not(.precision-eyebrow) { font-size:22px; line-height:1.5; letter-spacing:-.015em; }
+.precision-case-insight>.precision-case-context { font-size:16px!important; line-height:1.7!important; color:var(--muted); letter-spacing:0!important; }
+.precision-case-insight .precision-eyebrow { font-size:12px; }
+.precision-evidence-story .precision-case-figure { grid-column:1/-1; width:100%; max-width:1100px; justify-self:center; padding:26px; box-shadow:14px 14px 0 #edf3f5; }
+.precision-evidence-story .precision-case-figure>a { display:block; cursor:zoom-in; }
+.precision-evidence-story .precision-case-figure img { width:100%; max-height:580px; object-fit:contain; }
+.precision-case-figure figcaption { display:flex; align-items:center; justify-content:space-between; gap:16px; font-size:13px; }
+.precision-figure-enlarge { display:inline-flex; align-items:center; gap:24px; border:1px solid var(--line); padding:12px 16px; min-height:44px; color:var(--ink); font-size:14px; white-space:nowrap; }
+.precision-figure-enlarge:hover { border-color:var(--ink); }
+.precision-image-dialog { width:min(1320px,calc(100vw - 48px)); max-width:none; max-height:calc(100dvh - 40px); padding:24px; border:0; color:var(--ink); background:#fff; overflow:auto; }
+.precision-image-dialog::backdrop { background:#061924d9; backdrop-filter:blur(5px); }
+.precision-viewer-head { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.precision-viewer-head h2 { margin:0; font-size:24px; letter-spacing:-.03em; }
+.precision-viewer-head button { display:flex; gap:22px; align-items:center; color:var(--ink); background:#fff; border:1px solid var(--line); min-height:44px; padding:10px 16px; }
+.precision-viewer-head button span { font-size:24px; }
+.precision-viewer-tools { display:flex; align-items:center; flex-wrap:wrap; gap:10px; padding:18px 0; }
+.precision-viewer-tools button { padding:11px 16px; min-height:44px; border:1px solid var(--line); background:#fff; color:var(--ink); }
+.precision-viewer-tools button[aria-pressed="true"] { background:var(--ink); color:#fff; border-color:var(--ink); }
+.precision-viewer-tools a { margin-left:auto; padding-block:12px; font-size:14px; }
+.precision-viewer-canvas { background:#f5f7f8; padding:12px; }
+.precision-viewer-canvas img { display:block; width:100%; height:auto; max-height:65dvh; object-fit:contain; }
+.precision-viewer-note { font-size:13px; margin:16px 0 0; color:var(--muted); }
+body.precision-viewer-open { overflow:hidden; }
+
+/* Catalog controls stay within reach; the original links work without JavaScript. */
+.precision-catalog-intro { display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:end; padding-block:46px 36px; }
+.precision-catalog-intro h1 { font-size:clamp(42px,4.4vw,62px); line-height:1.04; letter-spacing:-.045em; margin:0; }
+.precision-catalog-intro .precision-eyebrow { font-size:12px; margin-bottom:16px; }
+.precision-catalog-intro>p:last-of-type { margin:0; font-size:18px; line-height:1.6; max-width:430px; }
+.precision-catalog-tools { position:sticky; top:0; z-index:30; background:#fff; border-block:1px solid var(--line); }
+.precision-category-nav { gap:8px; margin-block:0; padding-block:12px; border:0; flex-wrap:wrap; }
+.precision-category-nav a { align-items:center; justify-content:space-between; gap:22px; padding:12px 16px; border:1px solid transparent; font-size:14px; min-height:46px; }
+.precision-category-nav a>span { font:12px var(--mono); opacity:.7; }
+.precision-category-nav a:hover { background:#f0f5f7; }
+.precision-category-nav a[aria-current="true"] { background:var(--ink); color:#fff; }
+.precision-filter-status { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
+.precision-catalog-group { padding-top:36px; scroll-margin-top:95px; }
+.precision-catalog-group[hidden]+.zonge-conversion-cta { margin-top:40px; }
+#all-instruments { scroll-margin-top:90px; }
+.precision-group-heading { margin-bottom:22px; }
+.precision-group-heading h2 { font-size:28px; }
+.precision-product-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:30px; }
+.precision-card-photo { padding:12px; height:245px; background:#fff; border:1px solid var(--line); }
+.precision-card-photo img,.precision-product-photo img { mix-blend-mode:normal; }
+.photo-landscape .precision-card-photo img { object-fit:cover; object-position:68% 50%; }
+.precision-card-copy { padding:20px 0 26px; }
+.precision-card-copy>.precision-eyebrow { font-size:12px; }
+.precision-card-copy h3 { font-size:27px; margin-bottom:12px; }
+.precision-card-copy>p:not(.precision-eyebrow) { font-size:16px; margin-bottom:0; }
+.precision-card-facts { margin-top:16px; }
+.precision-card-facts dt { font-size:19px; }
+.precision-product-card .precision-spec-link { min-height:44px; display:inline-flex; align-items:center; margin-top:8px; font-size:14px; }
+.precision-sensor-image { max-width:640px; margin:0 0 30px; background:#fff; }
+.precision-sensor-image img { max-height:220px; width:100%; object-fit:contain; }
+.precision-product-grid-compact { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.precision-product-grid-compact .precision-card-copy { padding:24px; border:1px solid var(--line); }
+.precision-product-grid-compact .precision-card-copy>.precision-eyebrow { display:none; }
+.precision-product-photo { padding:16px; height:365px; }
+.precision-product-photo.precision-sensor-spec-panel { display:flex; flex-direction:column; align-items:stretch; justify-content:center; height:auto; min-height:320px; background:var(--deep); color:#fff; padding:34px; }
+.precision-sensor-spec-panel>.precision-eyebrow { color:var(--accent); font-size:12px; }
+.precision-sensor-spec-panel dl { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin:18px 0 28px; }
+.precision-sensor-spec-panel dt { font-size:clamp(28px,3vw,42px); font-weight:400; letter-spacing:-.04em; }
+.precision-sensor-spec-panel dd { font-size:14px; color:#bcd2dd; margin-top:8px; }
+.precision-sensor-spec-panel a { color:#fff; font-size:14px; border-top:1px solid #6f93a650; padding-top:18px; }
+.precision-product-facts { margin-block:22px; }
+
+/* Product chapters keep all specifications accessible without a wall of text. */
+.precision-detail-section { border-top:1px solid var(--line); padding:0; margin:0; }
+.precision-detail-section>summary { display:flex; align-items:center; justify-content:space-between; gap:20px; cursor:pointer; padding:22px 0; list-style:none; }
+.precision-detail-section>summary::-webkit-details-marker { display:none; }
+.zonge-section-prose .precision-detail-section>summary h2 { font-size:26px; margin:0; line-height:1.25; }
+.precision-detail-section>summary::after { content:'+'; font:28px var(--mono); font-weight:300; color:var(--blue); flex-shrink:0; }
+.precision-detail-section[open]>summary::after { content:'−'; }
+.precision-detail-body { padding:0 0 24px; }
+.precision-detail-body>:last-child { margin-bottom:0; }
+.precision-detail-section h2 { scroll-margin-top:28px; }
+.precision-detail-section summary:focus-visible { outline:2px solid var(--blue); outline-offset:4px; }
+.precision-page-photo.precision-page-figure { display:flex; flex-direction:column; background:#fff; padding:22px; height:425px; align-self:center; margin-block:28px; border:1px solid var(--line); }
+.precision-page-photo.precision-page-figure img { object-fit:contain; min-height:0; flex:1; width:100%; }
+.precision-photo-caption { font-size:12px; line-height:1.5; margin:12px 0 0; color:var(--muted); text-align:center; }
+
+/* Software is organized by task, with real model imagery rather than a scenic banner. */
+.precision-software-hero { background:#eef3f5; }
+.precision-software-hero-grid { display:grid; grid-template-columns:1fr 1.08fr; gap:56px; align-items:center; padding-block:54px; }
+.precision-software-hero .precision-eyebrow { font-size:12px; }
+.precision-software-hero h1 { font-size:clamp(44px,4.6vw,66px); font-weight:400; line-height:1.04; letter-spacing:-.05em; margin:0 0 24px; }
+.precision-software-hero h1 em { font-style:normal; color:#24758a; font-weight:300; }
+.precision-software-hero p:not(.precision-eyebrow) { font-size:18px; color:var(--muted); line-height:1.65; max-width:460px; }
+.precision-software-hero .precision-button { margin-top:16px; }
+.precision-software-hero figure { margin:0; padding:18px 18px 14px; background:#fff; border:1px solid var(--line); }
+.precision-software-hero figure img { width:100%; height:auto; }
+.precision-software-hero figcaption { font-size:12px; margin-top:12px; text-align:center; color:var(--muted); }
+.precision-software-catalog { padding-block:60px; }
+.precision-software-heading .precision-eyebrow { font-size:12px; }
+.precision-software-heading h2 { font-size:40px; letter-spacing:-.035em; margin:0 0 30px; }
+.precision-software-nav { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; border:1px solid var(--line); }
+.precision-software-nav a { display:flex; flex-wrap:wrap; align-items:center; gap:12px; padding:20px; border-right:1px solid var(--line); color:var(--ink); font-size:16px; }
+.precision-software-nav a:last-child { border:0; }
+.precision-software-nav a:hover { background:#eef5f7; }
+.precision-software-nav a>span:first-child { width:100%; font:12px var(--mono); color:var(--blue); }
+.precision-software-nav a>span:last-child { margin-left:auto; }
+.precision-software-group { display:grid; grid-template-columns:.7fr 1.3fr; gap:90px; padding-block:54px; border-bottom:1px solid var(--line); scroll-margin-top:24px; }
+.precision-software-group-heading { align-self:start; position:sticky; top:32px; }
+.precision-software-group-heading .precision-eyebrow { font-size:12px; }
+.precision-software-group h2 { font-size:32px; line-height:1.15; letter-spacing:-.03em; margin:0 0 18px; }
+.precision-software-group-heading>p:last-child { font-size:16px; color:var(--muted); line-height:1.65; }
+.precision-software-program { display:grid; grid-template-columns:118px 1fr; gap:26px; padding:20px 0; border-bottom:1px solid var(--line); }
+.precision-software-program:first-child { padding-top:0; }
+.precision-software-program:last-child { padding-bottom:0; border:0; }
+.precision-software-program h3 { font:17px var(--mono); font-weight:500; color:var(--ink); margin:4px 0 0; }
+.precision-software-program p { font-size:16px; line-height:1.7; color:var(--muted); margin:0; }
+.precision-software-program p a { text-decoration:underline; text-decoration-color:#bacfdc; text-underline-offset:4px; }
+.precision-software-program code { white-space:nowrap; color:var(--ink); background:#f1f5f6; padding:1px 3px; font-size:14px; }
+@media(max-width:1100px) {
+ .precision-evidence-story { gap:36px; }
+ .precision-software-hero-grid { gap:32px; }
+ .precision-software-group { gap:44px; }
+ .precision-card-photo { height:210px; }
+ .precision-category-nav a { padding-inline:12px; gap:12px; }
+}
+@media(max-width:900px) {
+ .precision-catalog-intro { gap:28px; padding-block:34px 28px; }
+ .precision-product-grid,.precision-product-grid-compact { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .precision-software-hero-grid { grid-template-columns:1fr 1fr; gap:24px; }
+ .precision-software-hero h1 { font-size:44px; }
+ .precision-software-nav { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .precision-software-nav a:nth-child(2) { border-right:0; }
+ .precision-software-nav a:nth-child(-n+2) { border-bottom:1px solid var(--line); }
+ .precision-software-group { grid-template-columns:.75fr 1.25fr; gap:30px; }
+ .precision-software-program { grid-template-columns:1fr; gap:10px; }
+}
+@media(max-width:600px) {
+ .precision-step-number { width:28px; height:28px; margin-right:8px; font-size:12px; }
+ .precision-hero-cinematic .precision-hero-foot { padding-block:18px; }
+ .precision-field-heading { padding-bottom:28px; }
+ .precision-field-heading h2 { font-size:52px; }
+ .precision-field-panorama { height:310px; }
+ .precision-evidence-story { grid-template-columns:1fr; gap:25px; padding-block:46px; }
+ .precision-evidence-story .precision-case-copy h2 { font-size:48px; }
+ .precision-case-insight>p:not(.precision-eyebrow) { font-size:20px; }
+ .precision-evidence-story .precision-case-figure { padding:12px; box-shadow:6px 6px 0 #edf3f5; }
+ .precision-case-figure figcaption { flex-direction:column; align-items:stretch; font-size:12px; }
+ .precision-figure-enlarge { justify-content:space-between; }
+ .precision-figure-label { font-size:12px; }
+ .precision-image-dialog { width:calc(100vw - 20px); padding:16px; max-height:calc(100dvh - 20px); }
+ .precision-viewer-head h2 { font-size:20px; }
+ .precision-viewer-head button { padding-inline:10px; gap:10px; }
+ .precision-viewer-tools { gap:8px; }
+ .precision-viewer-tools button { font-size:14px; padding-inline:12px; }
+ .precision-viewer-tools a { width:100%; margin-left:0; }
+ .precision-viewer-canvas { padding:4px; }
+ .precision-viewer-note { font-size:12px; }
+ .precision-product-stage-heading p { font-size:12px; }
+ .precision-product-stage-heading p:last-child { display:none; }
+ .precision-product-stage .precision-feature-grid { padding-top:25px; }
+ .precision-product-stage .precision-feature-image { padding-top:40px; }
+ .precision-product-stage .precision-feature-image>p { margin-top:14px; }
+ .precision-product-stage .precision-feature-copy h2 { font-size:44px; }
+ .precision-product-stage .precision-feature-copy>.precision-feature-subtitle { font-size:22px; }
+ .precision-catalog-intro { display:block; padding-block:26px 24px; }
+ .precision-catalog-intro h1 { font-size:40px; }
+ .precision-catalog-intro .precision-eyebrow { margin-bottom:12px; }
+ .precision-catalog-intro>p:last-of-type { font-size:16px; margin-top:14px; }
+ .precision-category-nav { display:flex; flex-wrap:nowrap; gap:6px; width:100%; padding:10px 20px; overflow-x:auto; scrollbar-width:thin; }
+ .precision-category-nav a { flex-shrink:0; padding:10px 12px; gap:12px; min-height:44px; border-color:var(--line); }
+ .precision-catalog-group { padding-top:26px; scroll-margin-top:84px; }
+ .precision-group-heading { margin-bottom:20px; }
+ .precision-group-heading h2 { font-size:26px; }
+ .precision-group-heading p { font-size:14px; line-height:1.5; margin-top:8px; }
+ .precision-product-grid,.precision-product-grid-compact { grid-template-columns:1fr; gap:22px; }
+ .precision-product-card { display:grid; grid-template-columns:112px minmax(0,1fr); gap:16px; padding-bottom:22px; border-bottom:1px solid var(--line); align-items:start; }
+ .precision-card-photo { padding:5px; height:112px; }
+ .photo-landscape .precision-card-photo img { object-position:70% 50%; }
+ .precision-card-copy { padding:0; border:0; min-width:0; }
+ .precision-card-copy>.precision-eyebrow { font-size:12px; margin-bottom:6px; }
+ .precision-card-copy h3 { font-size:25px; margin-bottom:10px; }
+ .precision-card-copy>p:not(.precision-eyebrow) { font-size:16px; line-height:1.5; }
+ .precision-card-facts { gap:10px 12px; padding-top:12px; margin-top:12px; }
+ .precision-card-facts>div { flex:1 1 70px; }
+ .precision-card-facts dt { font-size:17px; }
+ .precision-card-facts dd { font-size:12px; }
+ .precision-product-card .precision-spec-link { font-size:14px; line-height:1.3; }
+ .precision-product-grid-compact .precision-product-card { display:block; padding-bottom:0; border:0; }
+ .precision-product-grid-compact .precision-card-copy { padding:20px; }
+ .precision-product-grid-compact .precision-card-facts { flex-wrap:nowrap; }
+ .precision-sensor-image { margin-bottom:22px; }
+ .precision-sensor-image img { max-height:150px; }
+ .precision-product-photo { height:245px; padding:12px; }
+ .precision-product-hero-grid { gap:18px; }
+ .precision-product-photo.precision-sensor-spec-panel { order:0; min-height:0; padding:24px; }
+ .precision-sensor-spec-panel dl { gap:18px; margin:12px 0 20px; }
+ .precision-sensor-spec-panel dt { font-size:32px; }
+ .precision-product-hero h1 { font-size:46px; }
+ .precision-product-summary { font-size:17px; }
+ .precision-detail-section>summary { padding-block:18px; }
+ .zonge-section-prose .precision-detail-section>summary h2 { font-size:24px; }
+ .precision-detail-body { padding-bottom:20px; }
+ .precision-page-photo.precision-page-figure { margin:0 0 26px; height:335px; padding:14px; }
+ .precision-software-hero-grid { grid-template-columns:1fr; padding-block:34px; gap:28px; }
+ .precision-software-hero h1 { font-size:44px; }
+ .precision-software-hero p:not(.precision-eyebrow) { font-size:17px; }
+ .precision-software-hero figure { padding:12px; }
+ .precision-software-catalog { padding-block:36px; }
+ .precision-software-heading h2 { font-size:32px; margin-bottom:24px; }
+ .precision-software-nav a { padding:16px 12px; font-size:14px; gap:10px; min-width:0; }
+ .precision-software-group { grid-template-columns:1fr; gap:24px; padding-block:34px; }
+ .precision-software-group-heading { position:static; }
+ .precision-software-group-heading h2 { font-size:28px; margin-bottom:12px; }
+ .precision-software-group-heading>p:last-child { margin-bottom:0; }
+ .precision-software-program { gap:8px; padding-block:20px; }
+ .precision-software-program h3 { font-size:19px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ html { scroll-behavior:auto!important; }
+ .precision-card-photo img { transition:none; }
+}
+.precision-catalog-tools .precision-category-nav { margin-inline:auto; }
+.precision-catalog { scroll-margin-top:76px; }
+.precision-product-grid-pair { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.precision-product-grid-pair .precision-card-photo { height:300px; }
+.precision-power-options { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin:24px 0; }
+.precision-power-options>div { padding:20px 16px; background:#f1f5f7; }
+.zonge-section-prose .precision-power-options h3 { font-size:22px; line-height:1.15; margin:0 0 12px; }
+.precision-power-options p { font-size:16px; line-height:1.5; margin:0; }
+.precision-product-hero .precision-eyebrow,.precision-page-heading .precision-eyebrow { font-size:12px; }
+@media(max-width:600px) {
+ .precision-product-grid-pair { grid-template-columns:1fr; }
+ .precision-product-grid-pair .precision-card-photo { height:112px; }
+ .precision-power-options { grid-template-columns:1fr; gap:10px; }
+ .precision-power-options>div { display:grid; grid-template-columns:100px minmax(0,1fr); gap:14px; padding:16px; }
+ .zonge-section-prose .precision-power-options h3 { font-size:20px; margin:0; }
+}
