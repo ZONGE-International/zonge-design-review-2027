@@ -866,7 +866,7 @@ img {
   letter-spacing:-.04em;
   margin:0
 }
-.precision-page-heading>p:last-child:not(.precision-eyebrow) {
+.precision-page-summary {
   font-size:18px;
   color:var(--muted);
   line-height:1.6;
@@ -1172,6 +1172,7 @@ img {
 }
 .precision-category-nav {
   display:flex;
+  flex-wrap:wrap;
   gap:40px;
   margin:40px 0 0;
   padding:22px 0;
@@ -1183,6 +1184,21 @@ img {
   color:var(--ink);
   display:flex;
   gap:26px
+}
+.precision-instrument-shortcuts {
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 24px;
+  margin-top:28px;
+  padding-top:22px;
+  border-top:1px solid var(--line);
+  font-size:14px
+}
+.precision-instrument-shortcuts a {
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  color:var(--ink)
 }
 .precision-catalog {
   padding-bottom:70px
